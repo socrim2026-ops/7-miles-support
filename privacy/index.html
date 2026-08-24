@@ -53,7 +53,7 @@
     <p>Location is optional and requested only when you choose nearby results.
       When allowed, the app requests a fresh when-in-use location fix. It uses
       that fix on device to calculate distance and centre place searches. Before
-      querying the OpenStreetMap Overpass service, 7 Miles rounds the search
+      querying the Private.coffee OpenStreetMap Overpass service, 7 Miles rounds the search
       centre to two decimal places (roughly one-kilometre resolution). The raw
       GPS fix is not sent to OpenStreetMap or a developer server. 7 Miles does
       not request background location, create a trip history, or publish your
@@ -74,14 +74,15 @@
       The 7 Miles developer does not receive that information through a developer
       server.</p>
     <p>For broader camper-place coverage, the app sends an approximate search
-      centre directly to public OpenStreetMap Overpass servers and receives
+      centre directly to the Overpass service operated by Private.coffee and receives
       community-maintained place records. A typed town or area is resolved before
-      the approximate centre is sent. Those services receive normal network data,
-      such as an IP address, and may operate request logs under their own policies.
+      the approximate centre is sent. The operator says it temporarily logs a
+      truncated IP address and request metadata for up to 48 hours for operations;
+      the request does not include an account identifier or advertising identifier.
       See the <a href="https://www.openstreetmap.org/copyright">OpenStreetMap
-      copyright and licence page</a> and the
-      <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap
-      Foundation privacy policy</a>. 7 Miles does not send a rig profile, saved
+      copyright and licence page</a> and the operator’s
+      <a href="https://overpass.kumi.systems/">usage and privacy policy</a>.
+      7 Miles does not send a rig profile, saved
       field pack, private note, advertising identifier, account ID, or camera
       frame with a place-search request.</p>
 
