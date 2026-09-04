@@ -27,7 +27,7 @@
   <main id="content" class="document">
     <p class="eyebrow">7 Miles: Camper AR</p>
     <h1>Privacy policy</h1>
-    <p class="meta">Effective and last updated: August 24, 2026</p>
+    <p class="meta">Effective and last updated: September 5, 2026</p>
     <p>7 Miles is designed to work without an account, advertising, third-party
       analytics, or a developer-operated backend. The developer does not directly
       receive app data. Hosted service operators may process the limited data
@@ -45,6 +45,13 @@
         requirement, overnight status, evidence note, and the date you say the
         information was observed or checked; and</li>
       <li>whether onboarding has been completed.</li>
+      <li>trip preferences, your chosen overnight stop and backup, up to three
+        service stops, manually entered water/waste/battery levels, capacities,
+        daily consumption and expected solar assumptions;</li>
+      <li>a downloaded trip pack, including OpenStreetMap road geometry, place
+        labels, stop details and the available weather forecast. The pack is
+        stored in Application Support and excluded from device backup. Ordinary
+        network response caches may also be held on the device.</li>
     </ul>
     <p>This data is used only to provide app functionality. It is not sent to a
       server controlled by the 7 Miles developer and is not used for advertising
@@ -55,9 +62,9 @@
       While permission remains granted, the app may refresh a stale when-in-use
       fix on launch or foreground to keep nearby results current. It uses
       that fix on device to calculate distance and centre place searches. Before
-      querying hosted OpenStreetMap Overpass services, 7 Miles rounds the search
+      querying hosted OpenStreetMap Overpass or MET Norway services, 7 Miles rounds the search
       centre to two decimal places (roughly one-kilometre resolution). The raw
-      GPS fix is not sent to OpenStreetMap or a developer server. 7 Miles does
+      GPS fix is not sent to OpenStreetMap, MET Norway or a developer server. 7 Miles does
       not request background location, create a trip history, or publish your
       position.</p>
 
@@ -70,7 +77,8 @@
 
     <h2>Place search, Apple Maps, and OpenStreetMap</h2>
     <p>The native map display, transient typed-area resolution,
-      current-location services, directions handoff, and the iOS share sheet are
+      current-location services, requested driving-time/detour estimates,
+      directions handoff, and the iOS share sheet are
       Apple system services. Apple may process search,
       location, map, diagnostics, or sharing information under
       <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.
@@ -79,7 +87,8 @@
     <p>For broader camper-place coverage, the app sends an approximate search
       centre directly to the FOSSGIS-operated main Overpass service, with
       Private.coffee as a fallback, and receives community-maintained place
-      records. A typed town or area is resolved before the approximate centre is
+      records. Service searches and explicit offline road-map downloads use the
+      same providers and rounded coordinates. A typed town or area is resolved before the approximate centre is
       sent. Those operators receive normal connection metadata and may keep
       operational logs under their policies. Private.coffee says it truncates IP
       addresses and retains its request metadata for up to 48 hours. The request
@@ -94,6 +103,26 @@
       frame with a place-search request. Place records come only from
       OpenStreetMap contributors; Apple place results are not stored or merged
       into the inventory.</p>
+
+    <h2>Weather forecasts</h2>
+    <p>When you use Tonight with a chosen stop or search area, 7 Miles requests
+      a forecast and sunset information from MET Norway over HTTPS. The service
+      receives a two-decimal location and ordinary connection data, including
+      your IP address. MET Norway states that IP addresses and requested
+      coordinates may appear in logs stored in Norway. No supply levels, rig
+      profile, notes, account identifier or camera data are sent. Forecasts are
+      cached, marked with their retrieval time, and may be included in a trip
+      pack. There is no background weather polling. See
+      <a href="https://docs.api.met.no/doc/TermsOfService">MET API terms</a> and
+      <a href="https://www.met.no/en/About-us/privacy">MET Norway privacy</a>.</p>
+
+    <h2>Supply estimates and downloaded maps</h2>
+    <p>Supply calculations run on your iPhone from information you enter. The app
+      does not connect to tank or battery sensors. Offline road geometry is
+      derived from OpenStreetMap under ODbL. Apple map tiles and Apple driving
+      responses are not included in offline packs. You can delete the download
+      separately in Trip Pack. My Rig → Delete local data clears the pack, trip,
+      supplies, preferences, saved places and rig information.</p>
 
     <h2>External links and support</h2>
     <p>If you open a support, source, privacy, terms, or other external link, your
@@ -112,7 +141,8 @@
     <h2>Retention and deletion</h2>
     <p>Local data remains until you change or delete it, reset local data from My
       Rig, or uninstall the app. “Delete local data” clears the rig profile, saved
-      field packs, and onboarding state. Because there is no 7 Miles account or
+      field packs, supplies, chosen trip, preferences, downloaded maps and
+      onboarding state. Because there is no 7 Miles account or
       developer backend, there is no server-side account record to delete.</p>
 
     <h2>Children</h2>
